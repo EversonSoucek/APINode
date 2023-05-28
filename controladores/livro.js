@@ -32,8 +32,8 @@ function getLivro(req, res) {
 
 function postLivro(req, res) {
     try {
+        const livroNovo = req.body
         if (req.body.nome) {
-            const livroNovo = req.body
             insereLivro(livroNovo)
             res.status(201)
             res.send('livro inserido')
